@@ -1,0 +1,39 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "start-dev": "nodemon server.js",
+    "migrate": "knex migrate:latest",
+    "migrate-seed": "knex migrate:latest && knex seed:run",
+    "lint": "eslint . --max-warnings=0",
+    "prettier": "prettier --write --single-quote --trailing-comma es5 --print-width 120 '{src,seeds,migrations,shared}/**/*.js'"
+  },
+  "author": "Sam Clark",
+  "license": "MIT",
+  "dependencies": {
+    "boom": "^7.2.0",
+    "glue": "^5.0.0",
+    "good": "^8.1.1",
+    "hapi": "^17.5.0",
+    "hapi-auth-jwt2": "^8.1.0",
+    "howard": "^1.0.1",
+    "inert": "^5.1.0",
+    "joi": "^13.3.0",
+    "knex": "^0.14.6",
+    "objection": "^1.1.8",
+    "objection-softdelete": "^2.0.0",
+    "pg": "^7.4.3",
+    "vision": "^5.3.2",
+    "winston": "^2.4.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "nodemon": "^1.17.5"
+  }
+}
